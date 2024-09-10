@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Study Group Formation</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Study Group Formation</h1>
+    </header>
+
+    <section class="group-formation">
+      <h2>Find or Create Study Groups</h2>
+
+      <div class="search-filter">
+        <input type="text" id="subject" placeholder="Search by Subject" />
+        <input type="number" id="level" placeholder="Academic Level" />
+        <input
+          type="text"
+          id="availability"
+          placeholder="Availability (e.g. Weekends)"
+        />
+        <button onclick="searchGroups()">Search</button>
+      </div>
+
+      <div class="create-group">
+        <h3>Create a New Study Group</h3>
+        <input type="text" id="group-name" placeholder="Group Name" />
+        <input type="number" id="group-size" placeholder="Group Size" />
+        <input type="text" id="group-subject" placeholder="Subject" />
+        <input type="text" id="time-zone" placeholder="Time Zone" />
+        <select id="group-visibility">
+          <option value="public">Public</option>
+          <option value="private">Private</option>
+        </select>
+        <button onclick="createGroup()">Create Group</button>
+      </div>
+
+      <div id="group-list">
+        <h3>Available Study Groups</h3>
+        <!-- Dynamically generated groups will be listed here -->
+      </div>
+    </section>
+
+    <section class="collaboration-tools">
+      <h2>Collaboration Tools</h2>
+      <div class="note-taking">
+        <textarea
+          id="shared-notes"
+          placeholder="Start taking notes..."
+        ></textarea>
+      </div>
+
+      <div class="discussion-thread">
+        <h3>Discussion Thread</h3>
+        <div id="discussion-list">
+          <!-- Messages will be displayed here -->
+        </div>
+        <input type="text" id="discussion-input" placeholder="Type a message" />
+        <button onclick="sendMessage()">Send</button>
+      </div>
+
+      <div class="file-sharing">
+        <h3>File Sharing</h3>
+        <input type="file" id="file-upload" />
+        <button onclick="uploadFile()">Upload File</button>
+      </div>
+    </section>
+
+    <section class="study-room">
+      <h2>Virtual Study Rooms</h2>
+      <div id="study-room-interface">
+        <button onclick="startWhiteboard()">Start Whiteboard</button>
+        <button onclick="screenShare()">Screen Share</button>
+        <button onclick="collaborativeNotes()">Collaborative Notes</button>
+      </div>
+    </section>
+
+    <section class="progress-tracking">
+      <h2>Group Progress Tracking</h2>
+      <div id="progress-overview">
+        <!-- Visual indicators such as progress bars go here -->
+      </div>
+
+      <div class="milestone-tracking">
+        <h3>Set Group Milestones</h3>
+        <input type="text" id="milestone" placeholder="Enter Milestone" />
+        <button onclick="addMilestone()">Add Milestone</button>
+      </div>
+    </section>
+
+    <script src="script.js"></script>
+  </body>
+</html>
